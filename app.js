@@ -51,6 +51,13 @@ function startQuiz(){
     showQuestion();
 }
 
+     function resetState(){
+        nextButton.style.display = "none"
+        while(answerButtons.firstChild){
+            answerButtons.removeChild(answerButtons.firstChild)
+        }
+     }
+
 function showQuestion(){
     resetState()
      let currentQuestion = questions[currentQuestionIndex];
@@ -68,12 +75,6 @@ function showQuestion(){
         button.addEventListener("click", selectAnswer)
      })
 
-     function resetState(){
-        nextButton.style.display = "none"
-        while(answerButtons.firstChild){
-            answerButtons.removeChild(answerButtons.firstChild)
-        }
-     }
 }
 
 function selectAnswer(e){
@@ -81,7 +82,7 @@ function selectAnswer(e){
     const isCorrect = selectedBtn.dataset.correct === "true"
     if(isCorrect){
         selectedBtn.classList.add("correct")
-        score++
+        score++;
     }else{
         selectedBtn.classList.add("incorrect")
     }
@@ -89,7 +90,7 @@ function selectAnswer(e){
         if(button.dataset.correct === "true"){
             button.classList.add("correct")
         }
-        button.disabled = "true"
+        button.disabled = true;
     })
     nextButton.style.display = "block"
 }
