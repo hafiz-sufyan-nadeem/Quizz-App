@@ -71,3 +71,58 @@ body{
 .incorrect{
     background: #ff9393;
 }
+
+
+@media (max-width: 768px) {
+    .app {
+        width: 95%;
+        margin: 50px auto 0;
+        padding: 20px;
+    }
+
+    .app h1 {
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+
+    .quiz h2 {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #next-btn {
+        width: 120px;
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app {
+        margin: 30px auto 0;
+        padding: 15px;
+    }
+
+    .app h1 {
+        font-size: 18px;
+    }
+
+    .quiz h2 {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    #next-btn {
+        width: 100px;
+        font-size: 13px;
+        padding: 6px;
+    }
+}
